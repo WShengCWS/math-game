@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>The Mystery of the Old Mansion</title>
+  <link rel="icon" href="favicon.png" />
+  <script type="module" crossorigin src="./assets/index-BXepKD_z.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-k2dyuS-d.css">
+</head>
+<body>
+  <div id="app">
+    <canvas id="game" aria-label="Game view"></canvas>
+
+    <div id="hud" class="hidden">
+      <div id="objective" class="panel" aria-live="polite"><span class="obj-label"></span><span class="obj-text"></span></div>
+      <div id="cam-btns">
+        <button id="menuBtn" class="round" data-aria="menu">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+        </button>
+        <button id="turnL" class="round" data-aria="turn_left">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4 4 9l5 5M4 9h10a6 6 0 0 1 0 12h-3" /></svg>
+        </button>
+        <button id="turnR" class="round" data-aria="turn_right">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 4 5 5-5 5M20 9H10a6 6 0 0 0 0 12h3" /></svg>
+        </button>
+      </div>
+      <button id="prompt" class="hidden"><kbd>Space</kbd><span></span></button>
+      <div id="inventory" aria-label="Inventory"></div>
+    </div>
+
+    <div id="toast" aria-live="polite"></div>
+
+    <div id="letterbox" aria-hidden="true"><i></i><i></i></div>
+    <div id="titleov" aria-live="polite"><div class="tk"></div><div class="tt"></div></div>
+    <div id="caption" aria-live="polite"></div>
+    <button id="skipbtn" class="hidden"></button>
+
+    <div id="dialogue" class="hidden" role="dialog" aria-live="polite">
+      <img class="dlg-face hidden" alt="" />
+      <div class="dlg-name"></div>
+      <div class="dlg-text"></div>
+      <div class="dlg-choices"></div>
+      <div class="dlg-next" aria-hidden="true">▼</div>
+    </div>
+
+    <div id="reader" class="overlay hidden" role="dialog" aria-modal="true">
+      <div class="paper">
+        <h2 class="rd-title"></h2>
+        <div class="rd-body"></div>
+        <button class="rd-close primary"></button>
+      </div>
+    </div>
+
+    <div id="book" class="overlay hidden" role="dialog" aria-modal="true">
+      <div class="book">
+        <div class="bk-page">
+          <div class="bk-kicker"></div>
+          <h2 class="bk-title"></h2>
+          <p class="bk-text"></p>
+          <div class="bk-num"></div>
+        </div>
+        <div class="bk-btns"><button class="bk-prev"></button><button class="bk-next primary"></button></div>
+      </div>
+    </div>
+
+    <div id="menu" class="overlay hidden" role="dialog" aria-modal="true">
+      <div class="paper menu-paper">
+        <h2 class="mn-title"></h2>
+        <button class="mn-resume primary big"></button>
+        <label class="mn-row"><span class="mn-music"></span><input type="range" min="0" max="1" step="0.05" class="mn-vm" /></label>
+        <label class="mn-row"><span class="mn-sfx"></span><input type="range" min="0" max="1" step="0.05" class="mn-vs" /></label>
+        <div class="mn-row"><span class="mn-lang"></span><div class="mn-langs"></div></div>
+        <div class="mn-row"><span class="mn-gfx"></span><div class="mn-langs mn-gfxs"></div></div>
+        <button class="mn-from"></button>
+        <div class="mn-btns"><button class="mn-controls"></button><button class="mn-quit"></button></div>
+        <p class="mn-note"></p>
+      </div>
+    </div>
+
+    <div id="card" class="overlay hidden">
+      <div class="card-inner">
+        <div class="card-kicker"></div>
+        <h1 class="card-title"></h1>
+        <p class="card-text"></p>
+        <div class="card-btns"></div>
+      </div>
+    </div>
+
+    <div id="title" class="overlay">
+      <div class="title-inner">
+        <div class="title-kicker"></div>
+        <h1 class="title-main"></h1>
+        <div class="title-btns">
+          <button id="btnContinue" class="primary big hidden"></button>
+          <button id="btnStart" class="primary big"></button>
+          <button id="btnCh1"></button>
+        </div>
+        <div id="langs" role="group" aria-label="Language"></div>
+        <div id="loading"></div>
+      </div>
+    </div>
+
+    <div id="puzzle" class="overlay hidden"></div>
+    <div id="fade"></div>
+  </div>
+</body>
+</html>
